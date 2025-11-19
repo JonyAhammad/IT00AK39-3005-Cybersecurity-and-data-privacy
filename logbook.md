@@ -8,3 +8,4 @@
 | 09.11.2025 | 5 |  cisco prep module 4 and 5  | Legal and Ethical Issues , final exam |
 | 18.11.2025 | 6 |  PortSwigge  | Authentication Username enumeration via different responses → Reflection and Password reset broken logic → Reflection |
 | 19.11.2025 | 3 |  PortSwigge-SQL injection  | SQL injection vulnerability in WHERE clause allowing retrieval of hidden data and SQL injection vulnerability allowing login bypass |
+| 19.11.2025 | 2 |  PortSwigge-Access control vulnerabilities  | Unprotected admin functionality and User role can be modified in user profile |
