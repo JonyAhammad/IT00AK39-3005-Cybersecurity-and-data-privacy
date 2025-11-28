@@ -42,15 +42,16 @@
 # 2️⃣ Executive Summary
 
 **Short summary (1-2 sentences):**  
+The system contains several security weaknesses that increase the risk of client-side attacks, sensitive information exposure, and unauthorized request execution. Immediate remediation is required to reduce the attack surface and protect users
 
 **Overall risk level:** (Low / Medium / High / Critical)
 
 **Top 5 immediate actions:**  
-1.  
-2.  
-3.  
-4.  
-5.  
+1.  Content Security Policy (CSP) Header Not Set -  Medium
+2.  Missing Anti-clickjacking Header -  Medium
+3.  Application Error Disclosure -  Medium
+4.  Absence of Anti-CSRF Tokens -  Medium
+5.  User Agent Fuzzer -  Medium
 
 ---
 
