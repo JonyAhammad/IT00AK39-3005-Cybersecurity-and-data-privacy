@@ -87,7 +87,8 @@ The system contains several security weaknesses that increase the risk of client
 
 # 5️⃣ OWASP ZAP Test Report (Attachment)
 
-[ZAP Report](BookingSystem-Phase1/ZAP-Report.md)
+[ZAP Report](IT00AK39-3005-Cybersecurity-and-data-privacy/BookingSystem-Phase1
+/ZAP-Report.md)
 
 
 **Purpose:**  
