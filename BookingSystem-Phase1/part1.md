@@ -13,7 +13,7 @@
 - Test approach: Gray-box / Black-box / White-box
 
 **Test environment & dates:**  
-- Start:  
+- Start: 23-11.2025  
 - End:  
 - Test environment details (OS, runtime, DB, browsers):
 
