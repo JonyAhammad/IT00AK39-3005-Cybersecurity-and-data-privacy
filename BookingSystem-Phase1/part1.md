@@ -32,8 +32,10 @@
 
 **3.Exploring the database schema and viewing user data**
 ---
+<img width="1101" height="552" alt="image" src="https://github.com/user-attachments/assets/af19f8bf-fb80-4fae-a05c-3a5edd214ddd" />
 
-<img width="884" height="493" alt="image" src="https://github.com/user-attachments/assets/095d3b16-0e44-4405-8f05-bc89a7f165bd" />
+
+
 
 
 
