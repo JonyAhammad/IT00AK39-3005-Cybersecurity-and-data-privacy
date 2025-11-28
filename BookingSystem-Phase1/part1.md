@@ -87,6 +87,8 @@ The system contains several security weaknesses that increase the risk of client
 
 # 5️⃣ OWASP ZAP Test Report (Attachment)
 
+BookingSystem-Phase1/ZAP-Report.md
+
 **Purpose:**  
 - Attach or link your OWASP ZAP scan results.
 - http://localhost:8000/
