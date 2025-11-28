@@ -48,10 +48,10 @@ The system contains several security weaknesses that increase the risk of client
 
 **Top 5 immediate actions:**  
 1.  Content Security Policy (CSP) Header Not Set -  Medium
-2.  Missing Anti-clickjacking Header -  Medium
+2.  SQL Injection -  high
 3.  Application Error Disclosure -  Medium
 4.  Absence of Anti-CSRF Tokens -  Medium
-5.  User Agent Fuzzer -  Medium
+5.  Path Traversal-  low
 
 ---
 
