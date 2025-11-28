@@ -2,7 +2,7 @@
 # 1️⃣ Introduction
 
 **Tester(s):**  
-- Name:  
+- Name:  Jony Ahammad and rex
 
 **Purpose:**  
 - Describe the purpose of this test (e.g., identify vulnerabilities in registration and authentication flows).
