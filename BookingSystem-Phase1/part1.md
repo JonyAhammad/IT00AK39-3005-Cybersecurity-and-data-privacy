@@ -22,12 +22,19 @@
 
 ---
 **1.docker setup and run compose yml file**
+---
 
 <img width="2502" height="1325" alt="image" src="https://github.com/user-attachments/assets/9b7e51b9-4f4f-4425-9496-aafff7fd2838" />
 
-**2.docker setup and run compose yml file into brower**
+**2.docker setup and run the compose yml file in browser**
 ---
 <img width="1832" height="1041" alt="image" src="https://github.com/user-attachments/assets/c5bf7a5b-b3b4-4975-b32c-6df1959d6eee" />
+
+**3.Exploring the database schema and viewing user data**
+---
+
+<img width="884" height="493" alt="image" src="https://github.com/user-attachments/assets/095d3b16-0e44-4405-8f05-bc89a7f165bd" />
+
 
 
 # 2️⃣ Executive Summary
