@@ -96,6 +96,10 @@ The system contains several security weaknesses that increase the risk of client
 
 ---
 <img width="1502" height="1368" alt="image" src="https://github.com/user-attachments/assets/f88eb137-f480-40d4-85a7-6c5479de3191" />
+---
+
+<img width="1261" height="1307" alt="image" src="https://github.com/user-attachments/assets/616e0eee-6b59-4a75-b392-e19076a3e5d9" />
+
 
 
 **Instructions (CMD version):**
