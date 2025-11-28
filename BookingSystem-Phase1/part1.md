@@ -4,21 +4,60 @@
 **Tester(s):**  
 - Name:  Jony Ahammad and rex
 
-**Purpose:**  
-- Describe the purpose of this test (e.g., identify vulnerabilities in registration and authentication flows).
+**Purpose:** 
+# Purpose of the Test
+
+The purpose of this test is to **assess the security and privacy of the user registration functionality** in the system. Specifically, it aims to:
+
+1. **Identify vulnerabilities in registration and authentication flows**  
+   - Detect flaws that could allow unauthorized account creation, privilege escalation, or bypassing authentication.  
+   - Ensure that user roles (reservist vs. administrator) are correctly assigned and cannot be manipulated.  
+
+2. **Evaluate input validation and injection risks**  
+   - Test for SQL injection, cross-site scripting (XSS), or other malicious input that could compromise the system.  
+
+3. **Verify session management and data protection**  
+   - Ensure sessions are secure, expire appropriately, and cannot be hijacked.  
+   - Confirm sensitive user data is encrypted in transit and at rest.  
+
+4. **Check error handling and information leakage**  
+   - Ensure error messages do not expose system details or personal data.  
+
+5. **Assess GDPR compliance and Privacy by Design adherence**  
+   - Confirm that only necessary personal data is collected and anonymized when possible.  
+   - Verify that privacy is embedded in the system by default and that users’ rights (deletion, correction, data portability) are supported.  
+
+6. **Use automated tools (like OWASP ZAP) to identify security weaknesses**  
+   - Scan the registration process for common web application vulnerabilities and anomalies.  
+
+**Overall**, the goal is to detect anomalies and security weaknesses that could be exploited by attackers while ensuring that the system protects user data and aligns with GDPR and Privacy by Design principles.
+
+
 
 **Scope:**  
-- Tested components:  
-- Exclusions:  
-- Test approach: Gray-box / Black-box / White-box
+# Scope
+
+- **Tested components:** User registration page, input fields, validation, basic authentication flow.  
+- **Exclusions:** Full admin features, resource booking, session management, and other phases not related to registration.  
+- **Test approach:** Gray-box testing.
+---
 
 **Test environment & dates:**  
 - Start: 23-11.2025  
-- End:  
+- End: 28-11-2025
 - Test environment details (OS, runtime, DB, browsers):
 
 **Assumptions & constraints:**  
-- e.g., credentials provided, limited time, etc.
+
+- Credentials for reservist and admin provided.  
+- Limited time for testing.  
+- Only registration functionality is in scope.  
+- Testing done in a safe environment, not affecting production.  
+- Gray-box approach with partial system knowledge.  
+- Using tools like OWASP ZAP for scanning.  
+- Must follow GDPR and Privacy by Design rules.
+
+- 
 
 ---
 **1.docker setup and run compose yml file**
@@ -88,6 +127,7 @@ The system contains several security weaknesses that increase the risk of client
 # 5️⃣ OWASP ZAP Test Report (Attachment)
 
 [ZAP Report](ZAP-Report.md)
+---
 
 
 **Purpose:**  
@@ -98,9 +138,13 @@ The system contains several security weaknesses that increase the risk of client
 
 
 ---
-<img width="1502" height="1368" alt="image" src="https://github.com/user-attachments/assets/f88eb137-f480-40d4-85a7-6c5479de3191" />
+**zap screen**
 ---
+<img width="1502" height="1368" alt="image" src="https://github.com/user-attachments/assets/f88eb137-f480-40d4-85a7-6c5479de3191" />
 
+
+**ZAP testing**
+---
 <img width="1261" height="1307" alt="image" src="https://github.com/user-attachments/assets/616e0eee-6b59-4a75-b392-e19076a3e5d9" />
 
 
