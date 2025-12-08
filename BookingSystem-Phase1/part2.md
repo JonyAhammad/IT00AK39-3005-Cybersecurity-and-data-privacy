@@ -74,7 +74,11 @@ The purpose of this test is to **assess the security and privacy of the user reg
 
 **3.Exploring the database schema and viewing user data**
 ---
-<img width="1079" height="546" alt="image" src="https://github.com/user-attachments/assets/7760a495-bf7b-4d1e-89d7-defa5e136e89" />
+<img width="1105" height="621" alt="image" src="https://github.com/user-attachments/assets/034b62a3-bca2-4177-a317-086880a323d6" />
+---
+<img width="1504" height="560" alt="image" src="https://github.com/user-attachments/assets/373d52ed-d789-4a53-8af3-90c796fb8273" />
+
+
 
 
 
