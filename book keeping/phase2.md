@@ -1,62 +1,110 @@
+# 1️⃣ Phase 2 – Test Report
 
+## **Tester(s)**
+- **Jony Ahammad**
+- **Rex**
 
-# 1️⃣  phase 2
-
-**Tester(s):**  
-- Name:  Jony Ahammad and rex
-
-**Purpose:** 
-# Purpose of the Test
-
-The purpose of this test is to **assess the security and privacy of the user registration functionality** in the system. Specifically, it aims to:
-
-1. **Identify vulnerabilities in registration and authentication flows**  
-   - Detect flaws that could allow unauthorized account creation, privilege escalation, or bypassing authentication.  
-   - Ensure that user roles (reservist vs. administrator) are correctly assigned and cannot be manipulated.  
-
-2. **Evaluate input validation and injection risks**  
-   - Test for SQL injection, cross-site scripting (XSS), or other malicious input that could compromise the system.  
-
-3. **Verify session management and data protection**  
-   - Ensure sessions are secure, expire appropriately, and cannot be hijacked.  
-   - Confirm sensitive user data is encrypted in transit and at rest.  
-
-4. **Check error handling and information leakage**  
-   - Ensure error messages do not expose system details or personal data.  
-
-5. **Assess GDPR compliance and Privacy by Design adherence**  
-   - Confirm that only necessary personal data is collected and anonymized when possible.  
-   - Verify that privacy is embedded in the system by default and that users’ rights (deletion, correction, data portability) are supported.  
-
-6. **Use automated tools (like OWASP ZAP) to identify security weaknesses**  
-   - Scan the registration process for common web application vulnerabilities and anomalies.  
-
-**Overall**, the goal is to detect anomalies and security weaknesses that could be exploited by attackers while ensuring that the system protects user data and aligns with GDPR and Privacy by Design principles.
-
-
-
-**Scope:**  
-# Scope
-
-- **Tested components:** User registration page, input fields, validation, basic authentication flow.  
-- **Exclusions:** Full admin features, resource booking, session management, and other phases not related to registration.  
-- **Test approach:** Gray-box testing.
 ---
 
-**Test environment & dates:**  
-- Start: 23-11.2025  
-- End: 28-11-2025
-- Test environment details (OS, runtime, DB, browsers):
+## **Purpose of the Test**
 
-**Assumptions & constraints:**  
+The purpose of this Phase 2 test is to evaluate the **security, functionality, and privacy protections** of the updated Booking System application. Since Phase 2 improves password handling and backend logic, this test ensures that the new changes do not introduce vulnerabilities and that the system aligns with GDPR and Privacy-by-Design requirements.
 
-- Credentials for reservist and admin provided.  
-- Limited time for testing.  
-- Only registration functionality is in scope.  
-- Testing done in a safe environment, not affecting production.  
-- Gray-box approach with partial system knowledge.  
-- Using tools like OWASP ZAP for scanning.  
-- Must follow GDPR and Privacy by Design rules.
+### **Key Testing Objectives**
+
+### **1. Identify vulnerabilities in registration and authentication flows**
+- Check for unauthorized account creation.
+- Ensure user roles (reservist vs. admin) cannot be changed or manipulated through form tampering or API calls.
+- Verify that authentication cannot be bypassed.
+
+### **2. Evaluate input validation and injection risks**
+- Test registration form with SQL injection payloads.
+- Test for cross-site scripting (XSS) via input fields.
+- Confirm that invalid or malicious data is blocked.
+
+### **3. Verify session management and data protection**
+- Confirm that session cookies are handled securely.
+- Ensure sessions expire correctly after logout.
+- Check whether personal data is safely handled.
+
+### **4. Check error handling and information leakage**
+- Ensure errors do not reveal internal system details.
+- Confirm that messages do not expose whether an email address exists.
+
+### **5. Assess GDPR compliance and Privacy by Design**
+- Verify minimal data collection during registration.
+- Assess whether the system supports user rights (e.g., deletion, correction).
+- Check whether sensitive data appears encrypted or protected.
+
+### **6. Use automated tools to detect vulnerabilities**
+- OWASP ZAP scans were used (Spider + Active Scan).
+- Alerts were reviewed and compared to previous phases.
+
+> **Overall Goal:**  
+To identify weaknesses in the registration and authentication logic, evaluate improvements in Phase 2, and ensure the system protects user data according to GDPR.
+
+---
+
+## **Scope**
+
+### ✔️ **Tested Components**
+- Registration page  
+- Registration validation  
+- Authentication (login/logout)  
+- Backend registration logic  
+- Database interaction for user creation  
+- OWASP ZAP scan on registration and login endpoints  
+
+### ❌ **Excluded Components**
+- Full administrator dashboard  
+- Resource booking system  
+- Reservation modification/deletion  
+- Admin-level user controls  
+- Email verification or password reset features  
+
+### **Test Approach: Gray-box**
+- Partial knowledge of system behavior  
+- No access to source code  
+- Manual testing + automated scanning  
+
+---
+
+## **Test Environment & Dates**
+
+### **Test Period**
+- **Start date:** 6.12.2025  
+- **End date:** 8.12.2025  
+
+### **Environment Details**
+- **Operating System:** Windows 10  
+- **Runtime:** Docker Desktop  
+- **Deployment:**  
+  - `docker compose up -d` from the Phase 2 project folder  
+- **Containers Used:**  
+  - `cybersec-web-phase2` – web application  
+  - `cybersec-db-phase2` – PostgreSQL database  
+- **Browsers Used:**  
+  - Google Chrome (latest)  
+  - Mozilla Firefox (latest)  
+- **Tools Used:**  
+  - OWASP ZAP  
+  - Postman (for verifying API behavior)
+
+---
+
+## **Assumptions & Constraints**
+
+- Valid credentials for both **reservist** and **administrator** were provided for login tests.  
+- Only **registration and authentication** are in scope for Phase 2 test reporting.  
+- Testing time was limited, so deeper admin features were not analyzed.  
+- All testing was done locally using **Docker Desktop**, not a production environment.  
+- Some behaviors were inferred from system responses, as server logs were not accessible.  
+- OWASP ZAP was used responsibly to avoid overloading the application.  
+- GDPR and Privacy-by-Design guidelines were followed when handling test data.
+
+---
+
+
 
 - 
 
@@ -375,9 +423,10 @@ The system contains several security weaknesses that increase the risk of client
 ---
 
 <img width="1431" height="1352" alt="image" src="https://github.com/user-attachments/assets/4fd66fb9-38ff-47ec-bca0-1a3a4fdc073d" />
+---
+<img width="1428" height="1068" alt="image" src="https://github.com/user-attachments/assets/83a6a10b-5511-4b26-9495-b695d31753d0" />
 
-
-
+---
 
 **ZAP testing**
 ---
