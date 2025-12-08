@@ -93,12 +93,10 @@ The system contains several security weaknesses that increase the risk of client
 
 **Overall risk level:** (Low / Medium / High / Critical)
 
-**Top 5 immediate actions:**  
-1.  Content Security Policy (CSP) Header Not Set -  Medium
-2.  SQL Injection -  high
-3.  Application Error Disclosure -  Medium
-4.  Absence of Anti-CSRF Tokens -  Medium
-5.  Path Traversal-  low
+**Top  immediate actions:**  
+
+1.  Absence of Anti-CSRF Tokens -  Medium
+
 
 ---
 
@@ -149,12 +147,16 @@ The system contains several security weaknesses that increase the risk of client
 **zap screen**
 ---
 <img width="1436" height="1236" alt="image" src="https://github.com/user-attachments/assets/73804dce-f002-42f3-ac9b-f9cd8227cebf" />
+---
+<img width="1431" height="1352" alt="image" src="https://github.com/user-attachments/assets/4fd66fb9-38ff-47ec-bca0-1a3a4fdc073d" />
+
 
 
 
 **ZAP testing**
 ---
-<img width="1261" height="1307" alt="image" src="https://github.com/user-attachments/assets/616e0eee-6b59-4a75-b392-e19076a3e5d9" />
+<img width="1427" height="1347" alt="image" src="https://github.com/user-attachments/assets/7d34f86a-3915-489a-889c-7deb371d8ea2" />
+
 
 
 
