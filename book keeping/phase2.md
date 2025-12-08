@@ -365,7 +365,7 @@ The system contains several security weaknesses that increase the risk of client
 
 **Purpose:**  
 - Attach or link your OWASP ZAP scan results.
-- http://localhost:8000/
+
 
   <img width="948" height="1349" alt="image" src="https://github.com/user-attachments/assets/414afd34-eca3-439f-857e-5bf66ffe91d1" />
 
@@ -373,8 +373,7 @@ The system contains several security weaknesses that increase the risk of client
 ---
 **zap screen**
 ---
-<img width="1436" height="1236" alt="image" src="https://github.com/user-attachments/assets/73804dce-f002-42f3-ac9b-f9cd8227cebf" />
----
+
 <img width="1431" height="1352" alt="image" src="https://github.com/user-attachments/assets/4fd66fb9-38ff-47ec-bca0-1a3a4fdc073d" />
 
 
@@ -382,7 +381,6 @@ The system contains several security weaknesses that increase the risk of client
 
 **ZAP testing**
 ---
-<img width="1427" height="1347" alt="image" src="https://github.com/user-attachments/assets/7d34f86a-3915-489a-889c-7deb371d8ea2" />
 
 
 
