@@ -63,15 +63,19 @@ The purpose of this test is to **assess the security and privacy of the user reg
 **1.docker setup and run compose yml file**
 ---
 
-<img width="2502" height="1325" alt="image" src="https://github.com/user-attachments/assets/9b7e51b9-4f4f-4425-9496-aafff7fd2838" />
+<img width="2517" height="1326" alt="image" src="https://github.com/user-attachments/assets/42b2e4f2-ca32-479c-bd7c-683c3533420c" />
+
 
 **2.docker setup and run the compose yml file in browser**
 ---
-<img width="1832" height="1041" alt="image" src="https://github.com/user-attachments/assets/c5bf7a5b-b3b4-4975-b32c-6df1959d6eee" />
+
+<img width="1684" height="991" alt="image" src="https://github.com/user-attachments/assets/0fed7762-7dba-4eb4-91d1-c0fe83de77d1" />
+
 
 **3.Exploring the database schema and viewing user data**
 ---
-<img width="1101" height="552" alt="image" src="https://github.com/user-attachments/assets/af19f8bf-fb80-4fae-a05c-3a5edd214ddd" />
+<img width="1079" height="546" alt="image" src="https://github.com/user-attachments/assets/7760a495-bf7b-4d1e-89d7-defa5e136e89" />
+
 
 
 
@@ -140,7 +144,8 @@ The system contains several security weaknesses that increase the risk of client
 ---
 **zap screen**
 ---
-<img width="1502" height="1368" alt="image" src="https://github.com/user-attachments/assets/f88eb137-f480-40d4-85a7-6c5479de3191" />
+<img width="1436" height="1236" alt="image" src="https://github.com/user-attachments/assets/73804dce-f002-42f3-ac9b-f9cd8227cebf" />
+
 
 
 **ZAP testing**
