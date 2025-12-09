@@ -431,22 +431,39 @@ The system contains several security weaknesses that increase the risk of client
 **ZAP testing**
 ---
 
-
-
-
-**Instructions (CMD version):**
-1. Run OWASP ZAP baseline scan:  
-   ```bash
-   zap-baseline.py -t https://example.com -r zap_report_round1.html -J zap_report.json
-   ```
-2. Export results to markdown:  
-   ```bash
-   zap-cli report -o zap_report_round1.md -f markdown
-   ```
-3. Save the report as `zap_report_round1.md` and link it below.
-
+**Step 3:Password Cracking**
 ---
-> [!NOTE]
-> 📁 **Attach full report:** → `check itslearning` → **Add a link here**
-
+<img width="1497" height="722" alt="image" src="https://github.com/user-attachments/assets/0be9e181-dc3d-49d3-8737-b74f1365ce2e" />
 ---
+1 | whatsupdoc@looneytunes.tv |
+Explanation:
+This password follows a very common pattern: a simple English word + numbers. Such passwords exist in most public breach datasets, so CrackStation was able to find a match immediately.
+
+<img width="1520" height="449" alt="image" src="https://github.com/user-attachments/assets/dfde1834-6d21-4e6f-bbea-de7eb532edc1" />
+
+2 | doh@springfieldpower.net| 
+Explanation:
+This password follows a very common pattern: a simple English word + numbers. Such passwords exist in most public breach datasets, so CrackStation was able to find a match immediately.
+
+<img width="1503" height="423" alt="image" src="https://github.com/user-attachments/assets/036c0721-b141-4241-84c1-7dfd062b5081" />
+
+3 | darkknight@gothamwatch.org |
+Explanation:
+The password relates directly to the user’s fictional identity, making it predictable. Since many people use theme-based passwords, it already exists in CrackStation’s lookup tables.
+
+<img width="1442" height="424" alt="image" src="https://github.com/user-attachments/assets/a6249bf6-7020-46b2-ae66-61ed76ca68ea" />
+
+4 | iamyourfather@deathstar.gov  |
+Explanation:
+The password is a common phrase from popular culture and appears in leaked password lists. Since the hash was MD5 without salt, CrackStation could resolve it instantly.
+
+<img width="1472" height="416" alt="image" src="https://github.com/user-attachments/assets/824986c8-ee6e-4ffa-863c-e09821017a92" />
+
+5 | whysoserious@gothamchaos.net |
+
+Explanation:
+This password combines a simple word with a basic number pattern, making it extremely easy to crack. It was found immediately in CrackStation’s precomputed dictionary
+<img width="1512" height="455" alt="image" src="https://github.com/user-attachments/assets/27dcf070-cf9c-40fb-b8c2-5da9bacbbad1" />
+
+**[https://crackstation.net/ used for Password Cracking :](https://crackstation.net/)**
+
