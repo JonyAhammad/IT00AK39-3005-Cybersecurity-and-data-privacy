@@ -434,7 +434,7 @@ The system contains several security weaknesses that increase the risk of client
 **Step 3:Password Cracking**
 ---
 <img width="1497" height="722" alt="image" src="https://github.com/user-attachments/assets/0be9e181-dc3d-49d3-8737-b74f1365ce2e" />
----
+
 1 | whatsupdoc@looneytunes.tv |
 Explanation:
 This password follows a very common pattern: a simple English word + numbers. Such passwords exist in most public breach datasets, so CrackStation was able to find a match immediately.
