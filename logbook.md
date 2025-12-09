@@ -13,3 +13,5 @@
 | 24.11.2025 | 6 | panetration testing learning  | did according to class |
 | 28.11.2025 | 7 |  docker   | working booking phase1  |
 | 2.12.2025 | 7 |  docker   | working booking phase1 PART 2  |
+| 7.12.2025 | 6 |  docker, debien, passowrd crack   | working booking phase2   |
+| 9.12.2025 | 8 |  docker, debien, passowrd crack   | working booking phase2   |
