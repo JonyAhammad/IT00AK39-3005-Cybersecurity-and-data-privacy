@@ -4,3 +4,6 @@
 
 [ZAP Report 4:](zap-report4.md)
 
+<img width="2462" height="1003" alt="image" src="https://github.com/user-attachments/assets/c8223d38-72f9-4d4f-905e-d68e5d09a64b" />
+**manage reservation**
+<img width="2158" height="985" alt="image" src="https://github.com/user-attachments/assets/fade64df-0c2d-40e6-b8ca-549160a0f0b6" />
