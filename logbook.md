@@ -17,3 +17,4 @@
 | 9.12.2025 | 8 |  docker, debien, passowrd crack   | working booking phase2   |
 | 12.12.2025 | 3 |  Authorization Testing Assignment  | working booking phase3   |
 | 17.12.2025 | 6 |  Authorization Testing Assignment  | working booking phase3   |
+| 17.12.2025 | 6 |   GDPR Assignment  | working booking phase4   |
