@@ -1,3 +1,182 @@
+#  Authorization Testing Report – Phase 3
+
+## Tester(s)
+- **Jony Ahammad**
+- **Rex**
+
+---
+
+##  Purpose of the Test
+
+The purpose of this authorization testing is to verify that **role-based access control (RBAC)** is correctly implemented in the **Phase 3 Booking System**.
+
+The test confirms that:
+- Guests cannot access protected content
+- Reservers cannot perform administrator actions
+- Administrators have full control without unnecessary exposure
+- Authorization is enforced at the backend level
+- No hidden endpoints or authorization bypasses exist
+
+System behavior is evaluated against the official project specifications (points 1–8).
+
+---
+
+##  Test Methodology
+
+- **Approach:** Gray-box testing  
+- **Techniques:**
+  - Browser-based manual testing
+  - URL manipulation
+  - OWASP ZAP authenticated scans
+  - Gobuster and wfuzz endpoint discovery
+- **Roles Tested:**
+  - Guest
+  - Reserver
+  - Administrator
+
+---
+
+##  Guest (Not Logged In)
+
+###  Can Do
+- Can view landing page — `/`  
+  - Observation: Page accessible  
+  - Spec match: ✔ Yes
+
+- Can view public resource list — `/resources`  
+  - Observation: Resource list visible  
+  - Spec match: ✔ Yes
+
+- Can view booked resources without reserver identity — `/`  
+  - Observation: No personal data shown  
+  - Spec match: ✔ Yes (spec 8)
+
+- Can access login page — `/login`  
+  - Observation: Login form accessible  
+  - Spec match: ✔ Yes
+
+- Can access registration page — `/register`  
+  - Observation: Registration available  
+  - Spec match: ✔ Yes
+
+---
+
+###  Cannot Do
+- Cannot access reservation page — `/reservation`  
+  - Observation: Redirected to login  
+  - Spec match: ✔ Yes
+
+- Cannot access profile page — `/profile`  
+  - Observation: Access denied  
+  - Spec match: ✔ Yes
+
+- Cannot access admin pages — `/admin/*`  
+  - Observation: Blocked  
+  - Spec match: ✔ Yes
+
+- Cannot create reservations — `POST /api/reservations`  
+  - Observation: Unauthorized  
+  - Spec match: ✔ Yes
+
+- Cannot access protected API endpoints — `/api/*`  
+  - Observation: Access denied  
+  - Spec match: ✔ Yes
+
+---
+
+## 🧑‍💼 Reserver (Authenticated User)
+
+###  Can Do
+- Can log in and log out — `/login`, `/logout`  
+  - Observation: Works correctly  
+  - Spec match: ✔ Yes
+
+- Can book a resource — `/reservation`, `POST /api/reservations`  
+  - Observation: Booking successful  
+  - Spec match: ✔ Yes
+
+- Can view own profile and reservations — `/profile`  
+  - Observation: Only own data visible  
+  - Spec match: ✔ Yes
+
+- Can list resources — `/resources`  
+  - Observation: Accessible  
+  - Spec match: ✔ Yes
+
+- Can access reserver APIs — `/api/reservations`  
+  - Observation: Limited to own data  
+  - Spec match: ✔ Yes
+
+---
+
+###  Cannot Do
+- Cannot access admin dashboard — `/admin`  
+  - Observation: Access denied  
+  - Spec match: ✔ Yes
+
+- Cannot manage users — `/api/admin/users`  
+  - Observation: Unauthorized  
+  - Spec match: ✔ Yes
+
+- Cannot delete other users — `/api/admin/users/:id`  
+  - Observation: Blocked  
+  - Spec match: ✔ Yes
+
+- Cannot modify resources — `/api/admin/resources`  
+  - Observation: Blocked  
+  - Spec match: ✔ Yes
+
+- Cannot escalate privileges via form or API tampering  
+  - Observation: Role unchanged  
+  - Spec match: ✔ Yes
+
+---
+
+##  Administrator
+
+###  Can Do
+- Can access admin dashboard — `/admin`  
+  - Observation: Accessible  
+  - Spec match: ✔ Yes
+
+- Can add, modify, and delete resources — `/admin/resources/*`  
+  - Observation: Actions successful  
+  - Spec match: ✔ Yes
+
+- Can manage all reservations — `/admin/reservations`  
+  - Observation: Full access  
+  - Spec match: ✔ Yes
+
+- Can delete reservers — `/admin/users/delete/:id`  
+  - Observation: Deletion successful  
+  - Spec match: ✔ Yes
+
+- Can view all users — `/admin/users`  
+  - Observation: User list visible  
+  - Spec match: ✔ Yes (spec 4)
+
+---
+
+### ❌ Cannot Do / Observations
+- No unnecessary permissions detected  
+- No excessive data exposure found  
+- No admin-only endpoints accessible by other roles  
+
+---
+
+##  Hidden Endpoint Discovery
+
+### Tools Used
+- OWASP ZAP
+- Gobuster
+- wfuzz
+
+### Findings
+- All discovered endpoints were protected
+- No IDOR vulnerabilities detected
+- No authorization bypasses found
+
+  
 **connecting to debien and running into powersheel**
 --
 
