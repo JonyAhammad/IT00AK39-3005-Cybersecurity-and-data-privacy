@@ -26,3 +26,12 @@
 **manage reservation update, delete, cancel**
 --
 <img width="2158" height="985" alt="image" src="https://github.com/user-attachments/assets/fade64df-0c2d-40e6-b8ca-549160a0f0b6" />
+
+**manage reservation as adminstratorl**
+---
+<img width="1367" height="819" alt="image" src="https://github.com/user-attachments/assets/4d06f650-ceb6-43d9-a247-6ec0c6a56d3c" />
+
+**Gobuster / wfuzz / ffuf install**
+--
+
+<img width="1894" height="877" alt="image" src="https://github.com/user-attachments/assets/90de23c8-3fdc-4fe6-9ddc-e65561f637c7" />
