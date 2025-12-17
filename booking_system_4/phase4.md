@@ -4,26 +4,25 @@
 **Name:** Jony Ahammad
 
 ## Purpose of the Test
-In this phase, the role is that of a novice penetration tester working for a company that provides a web-based Booking System.  
-The goal of this phase is to review the system from a **GDPR compliance** perspective.
-
+In this phase, the role is that of a 1st penetration tester working for a company that provides a web-based Booking System. and 
+The goal of this phase is to review the system from a **GDPR compliance** perspective and all privacy ,policies match with GDPR.
 Authorization testing was completed in previous phases.  
 Therefore, this phase focuses **only on GDPR and Privacy by Design (PbD)**.
 
 ---
 
 ## System Description
-The Booking System has the following features:
- The system is accessed via a web browser
- Users can register and log in
- Logged-in users act as either a **reserver** or an **administrator**
-Administrators can add, modify, and delete resources and reservations
-Administrators can delete reservers
-Reservers can book resources if they are over 15 years old
- Resources are booked on an hourly basis
-Booked resources are visible without login, but reserver identities are hidden
-The client requires GDPR compliance
-The system is developed using Privacy by Design principles
+- The Booking System has the following features:
+- The system is accessed via a web browser
+- Users can register and log in
+- Logged-in users act as either a **reserver** or an **administrator**
+- Administrators can add, modify, and delete resources and reservations
+- Administrators can delete reservers
+- Reservers can book resources if they are over 15 years old
+- Resources are booked on an hourly basis
+- Booked resources are visible without login, but reserver identities are hidden
+- The client requires GDPR compliance
+- The system is developed using Privacy by Design principles
 
 ---
 
@@ -72,6 +71,7 @@ This file explains:
 The `/terms` page was checked.  
 Since the page was empty, a new file was created:
 - `termsofservice.md`
+<img width="2537" height="1280" alt="Screenshot 2025-12-18 010442" src="https://github.com/user-attachments/assets/85fc5aca-813e-4938-9f4f-16303ebe2184" />
 
 This file describes:
 - System usage rules
@@ -82,6 +82,7 @@ This file describes:
 The `/cookiepolicy` page was checked.  
 Since the page was empty, a new file was created:
 - `cookiepolicy.md`
+<img width="2554" height="1085" alt="5 cookies" src="https://github.com/user-attachments/assets/77004baa-8b3a-4661-ac7d-53d1756c300d" />
 
 This file explains:
 - Use of essential cookies (session and CSRF tokens)
@@ -91,8 +92,8 @@ External guidance from **cookieyes.com** was used to ensure correctness.
 
 ---
 
-## Deliverables (GitHub Repository)
-The following four items are included in the repository:
+## Final Output 
+The following four items explain all privacy and GDPR:
 
 1. [GDPR_checklist](GDPR_checklist.md)
 2.  [privacypolicy.md](privacypolicy.md)
@@ -102,6 +103,12 @@ The following four items are included in the repository:
 ---
 
 ## Conclusion
-The Booking System follows key GDPR principles such as data minimization, role-based access control, secure authentication, and Privacy by Design.
+The Booking System follows key GDPR principles such as data minimization, role-based access control, secure authentication, and Privacy by Design. Some limitations remain, but overall the system demonstrates **partial GDPR compliance**, suitable for an educational purpose.
 
-Some limitations remain, but overall the system demonstrates **partial GDPR compliance**, suitable for an educational environment.
+**here attatch working picture**
+--
+<img width="1905" height="902" alt="1" src="https://github.com/user-attachments/assets/d1472a0a-1d12-489f-956f-2efeec2784e8" />
+
+<img width="1584" height="832" alt="2" src="https://github.com/user-attachments/assets/3a4a4b26-d6e1-418b-bc91-4d500abbc0f6" />
+<img width="1690" height="829" alt="3 reserver" src="https://github.com/user-attachments/assets/3b71df74-62f0-43a2-bead-984a80973426" />
+<img width="1462" height="435" alt="4 database" src="https://github.com/user-attachments/assets/2cdff2fc-907f-485e-9408-b0754b87d4e5" />
