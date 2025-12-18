@@ -152,8 +152,8 @@ System behavior is evaluated against the official project specifications (points
   - Spec match: ✔ Yes
 
 - Can view all users — `/admin/users`  
-  - Observation: User list visible  
-  - Spec match: ✔ Yes (spec 4)
+  - Observation: Endpoint not in use / not accessible  
+  - Spec match: ❌ No (spec 4)
 
 ---
 
