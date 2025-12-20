@@ -18,4 +18,5 @@
 | 12.12.2025 | 3 |  Authorization Testing Assignment  | working booking phase3   |
 | 17.12.2025 | 6 |  Authorization Testing Assignment  | working booking phase3   |
 | 17.12.2025 | 6 |   GDPR Assignment  | working booking phase4   |
-| 17.12.2025 | 5 |   PortSwigger |   SQL Injection, Authentication and Access Contro |
+| 17.12.2025 | 6 |   PortSwigger |   SQL Injection, Authentication and Access Contro |
+| 20.12.2025 | 5 |   PortSwigger |   SQL Injection, Cross-site scripting |
