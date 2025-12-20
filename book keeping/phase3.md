@@ -36,135 +36,81 @@ System behavior is evaluated against the official project specifications (points
 
 ---
 
-##  Guest (Not Logged In)
+### ✅ Guest — Allowed Actions
 
-###  Can Do
-- Can view landing page — `/`  
-  - Observation: Page accessible  
-  - Spec match: ✔ Yes
+| Action | Endpoint | Behavior | Spec OK? | Notes |
+|--------|---------|----------|----------|-------|
+| View public resource list | `/` | Works, shows resources without names | ✔️ Yes | Matches GDPR requirement (spec #8) |
+| Access login page | `/login` | Works | ✔️ Yes | - |
+| Access registration page | `/register` | Works | ✔️ Yes | - |
+| Access public API resources | `/api/resources` | Returns data | ❌ No | Data exposure vulnerability |
 
-- Can view public resource list — `/resources`  
-  - Observation: Resource list visible  
-  - Spec match: ✔ Yes
+### ❌ Guest — Blocked Actions
 
-- Can view booked resources without reserver identity — `/`  
-  - Observation: No personal data shown  
-  - Spec match: ✔ Yes (spec 8)
-
-- Can access login page — `/login`  
-  - Observation: Login form accessible  
-  - Spec match: ✔ Yes
-
-- Can access registration page — `/register`  
-  - Observation: Registration available  
-  - Spec match: ✔ Yes
+| Action | Endpoint | Behavior | Spec OK? |
+|--------|---------|----------|----------|
+| Access profile | `/profile` | Not Found | ✔️ Yes |
+| Access reservation page | `/reservation` | Unauthorized | ✔️ Yes |
+| Access admin dashboard | `/admin` | Not Found | ✔️ Yes |
+| Access admin user list | `/admin/users` | Not Found | ✔️ Yes |
+| Access admin resources | `/admin/resources` | Not Found | ✔️ Yes |
+| Access reservations API | `/api/reservations` | Protected (returns nothing) | ✔️ Yes |
+| Access admin user API | `/api/admin/users` | Not Found | ✔️ Yes |
 
 ---
 
-###  Cannot Do
-- Cannot access reservation page — `/reservation`  
-  - Observation: Redirected to login  
-  - Spec match: ✔ Yes
+## 2. Reserver (Logged-In Normal User)
 
-- Cannot access profile page — `/profile`  
-  - Observation: Access denied  
-  - Spec match: ✔ Yes
+### ✅ Reserver — Allowed Actions
 
-- Cannot access admin pages — `/admin/*`  
-  - Observation: Blocked  
-  - Spec match: ✔ Yes
+| Action | Endpoint | Behavior | Spec OK? | Notes |
+|--------|---------|----------|----------|-------|
+| Login | `/login` | Works | ✔️ Yes | - |
+| Register | `/register` | Works | ✔️ Yes | - |
+| Access reservation page | `/reservation` | Works | ✔️ Yes | Can book resources |
+| View resources (API) | `/api/resources` | Returns data | ✔️ Yes | Reserver can see available resources |
+| View reservations (API) | `/api/reservations` | Returns data | ✔️ Yes | Can view own or all reservations |
 
-- Cannot create reservations — `POST /api/reservations`  
-  - Observation: Unauthorized  
-  - Spec match: ✔ Yes
+### ❌ Reserver — Blocked / Incorrect Actions
 
-- Cannot access protected API endpoints — `/api/*`  
-  - Observation: Access denied  
-  - Spec match: ✔ Yes
-
----
-
-## 🧑‍💼 Reserver (Authenticated User)
-
-###  Can Do
-- Can log in and log out — `/login`, `/logout`  
-  - Observation: Works correctly  
-  - Spec match: ✔ Yes
-
-- Can book a resource — `/reservation`, `POST /api/reservations`  
-  - Observation: Booking successful  
-  - Spec match: ✔ Yes
-
-- Can view own profile and reservations — `/profile`  
-  - Observation: Only own data visible  
-  - Spec match: ✔ Yes
-
-- Can list resources — `/resources`  
-  - Observation: Accessible  
-  - Spec match: ✔ Yes
-
-- Can access reserver APIs — `/api/reservations`  
-  - Observation: Limited to own data  
-  - Spec match: ✔ Yes
+| Action | Endpoint | Behavior | Spec OK? | Notes |
+|--------|---------|----------|----------|-------|
+| Access profile | `/profile` | Not Found (404) | ❌ No | BUG: Reserver should have a profile page |
+| Access admin pages | `/admin/*` | 404 – “The process failed” | ✔️ Yes | Correctly blocked, though 403 preferred |
+| Access admin API | `/api/admin/users` | 404 – “The process failed” | ✔️ Yes | Correctly protected |
 
 ---
 
-###  Cannot Do
-- Cannot access admin dashboard — `/admin`  
-  - Observation: Access denied  
-  - Spec match: ✔ Yes
+## 3. Administrator (Logged-In Admin User)
 
-- Cannot manage users — `/api/admin/users`  
-  - Observation: Unauthorized  
-  - Spec match: ✔ Yes
+### ✅ Admin — Allowed Actions
 
-- Cannot delete other users — `/api/admin/users/:id`  
-  - Observation: Blocked  
-  - Spec match: ✔ Yes
+| Action | Endpoint | Behavior | Spec OK? | Notes |
+|--------|---------|----------|----------|-------|
+| View homepage | `/` | Works, names hidden | ✔️ Yes | Good privacy |
+| Login | `/login` | Works | ✔️ Yes | - |
+| Register | `/register` | Works | ✔️ Yes | - |
+| Access reservation UI | `/reservation` | Works | ✔️ Yes | - |
+| List resources (API) | `/api/resources` | Returns data | ✔️ Yes | - |
+| Create resource | `POST /api/resources` | Works | ✔️ Yes | Admin can add resources |
+| Modify resource | `PUT /api/resources/1` | Works | ✔️ Yes | Admin can edit resources |
+| View all reservations | `/api/reservations` | Works | ✔️ Yes | Admin access allowed |
 
-- Cannot modify resources — `/api/admin/resources`  
-  - Observation: Blocked  
-  - Spec match: ✔ Yes
+### ❌ Admin — Unexpected Limitations / Bugs
 
-- Cannot escalate privileges via form or API tampering  
-  - Observation: Role unchanged  
-  - Spec match: ✔ Yes
+| Action | Endpoint | Behavior | Spec OK? | Notes |
+|--------|---------|----------|----------|-------|
+| Access admin dashboard | `/admin` | Not Found | ❌ No | Admin UI missing |
+| View users (UI) | `/admin/users` | Not Found | ❌ No | Required by spec |
+| Manage resources (UI) | `/admin/resources` | Not Found | ❌ No | UI does not exist |
+| Delete resource | `DELETE /api/resources/1` | ❌ Error | ❌ No | Admin must delete resources |
+| View users (API) | `GET /api/admin/users` | Not Found | ❌ No | Must exist per spec |
+| Delete user | `DELETE /api/admin/users/1` | Not Found | ❌ No | Admin cannot remove reservers |
 
----
-
-##  Administrator
-
-###  Can Do
-- Can access admin dashboard — `/admin`  
-  - Observation: Accessible  
-  - Spec match: ✔ Yes
-
-- Can add, modify, and delete resources — `/admin/resources/*`  
-  - Observation: Actions successful  
-  - Spec match: ✔ Yes
-
-- Can manage all reservations — `/admin/reservations`  
-  - Observation: Full access  
-  - Spec match: ✔ Yes
-
-- Can delete reservers — `/admin/users/delete/:id`  
-  - Observation: Deletion successful  
-  - Spec match: ✔ Yes
-
-- Can view all users — `/admin/users`  
-  - Observation: Endpoint not in use / not accessible  
-  - Spec match: ❌ No (spec 4)
 
 ---
 
-### ❌ Cannot Do / Observations
-- No unnecessary permissions detected  
-- No excessive data exposure found  
-- No admin-only endpoints accessible by other roles  
-
----
-
-##  Hidden Endpoint Discovery
+# Phase 3 — Hidden Directory & Endpoint Discovery (Gobuster + wfuzz)
 
 ### Tools Used
 - OWASP ZAP
